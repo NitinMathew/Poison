@@ -1,3 +1,17 @@
 <html>
-hello Nitin
-</html>
+Live stream  
+<body>
+  <video id="vid" autoplay></video>
+  <script>
+  navigator.mediaDevices.getUserMedia({
+    video:{
+      width: 1280,
+      height: 720
+    }
+  })
+  .then(stream => {
+    document.getElementById("vid").srcObject=stream;
+  })
+</script>
+
+  </html>
